@@ -1,1 +1,21 @@
-<p> Testing </p>
+<h1>Category Listing Page</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Remarks</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.category_name %></td>
+      <td><%= category.remarks %></td>
+      <td>Placeholder</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
