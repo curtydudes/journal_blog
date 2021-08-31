@@ -2,3 +2,7 @@
 
 <p><strong>Title: </strong> <%= @category.category_name %></p>
 <p><strong>Remarks: </strong> <%= @category.remarks %></p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Delete', category_path(@category), method: :delete, data: { confirm: "Are you sure?"} %> |
+<%= link_to 'Return to Main Page', root_path %>
