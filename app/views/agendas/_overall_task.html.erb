@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>Task Name</th>
+      <th>Task description</th>
+      <th>Deadline</th>
+      <th>Status</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agendas.each do |agenda| %>
+    <tr>
+      <td><%= agenda.task_name %></td>
+      <td><%= agenda.task_description %></td>
+      <td><%= agenda.deadline %></td>
+      <td><%= agenda.status %></td>
+      <td><%= link_to 'Show', category_agenda_path(agenda.category_id, agenda.id) %></td>
+      <td><%= link_to 'Edit', edit_category_agenda_path(agenda.category_id, agenda.id) %></td>
+      <td><%= link_to 'Delete', category_agenda_path(agenda.category_id, agenda.id), method: :delete, data: { confirm: "Are you sure?"} %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

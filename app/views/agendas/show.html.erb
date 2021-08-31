@@ -1,0 +1,25 @@
+<div>
+<div>
+    <h1>SHOW TASK</h1>
+  </div>
+  <div>
+    Task Name: <%= @agenda.task_name %>
+  </div>
+  <div>
+    Task Description: <%= @agenda.task_description %>
+  </div>
+</div>
+
+  <div>
+    Task Deadline: <%= @agenda.deadline %>
+  </div>
+
+  <div>
+    Task Status: <%= @agenda.status %>
+  </div>
+</div>
+
+<div class = "back_button">
+  <td><%= link_to "Back", category_agendas_path %></td>
+  
+</div>

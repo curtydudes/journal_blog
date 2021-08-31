@@ -1,0 +1,34 @@
+<% if @agenda.errors.any? %>
+  <h2>The following errors prevented the task from being saved</h2>
+  <ul>
+    <% @agenda.errors.full_messages.each do |msg|%>
+      <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with scope: :agenda, model: [@agenda.category, @agenda], locale: true do |f| %>
+
+<div>
+  <th><%= f.label :task_name %></th>
+  <th><%= f.text_field :task_name %></th>
+</div>
+<div>
+  <th><%= f.label :task_description%></th>
+  <th><%= f.text_field :task_description %></th>
+</div>
+<div>
+  <th><%= f.label :deadline %></th>
+  <th><%= f.date_field :deadline %></th>
+</div>
+<div>
+  <th><%= f.label :status %></th>
+  <th><%= f.text_field :status %></th>
+</div>
+
+<div>
+  <%= f.submit :"Add Task" %>
+  <%= link_to "Cancel", category_agendas_path %>
+ </div>
+   
+<% end %>
