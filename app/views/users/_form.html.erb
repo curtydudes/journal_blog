@@ -25,7 +25,7 @@
   </p>  
 
   <p>
-    <%= f.submit "Sign up", class: "signUpButton"%>
+    <%= f.submit(@user.new_record? ? "Sign up" : "Update Account", class: "signUpButton")%>
       <div>
         <%= link_to 'Return to Main Page', root_path %>
       </div>
