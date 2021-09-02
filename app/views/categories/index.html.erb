@@ -12,11 +12,12 @@
   <tbody>
     <% @categories.each do |category| %>
     <tr>
-      <td><%= category.category_name %></td>
+      <td><%= category.category_name %></td>   
       <td><%= category.remarks %></td>
       <td><%= link_to 'Show', category_path(category) %></td>
       <td><%= link_to 'Edit', edit_category_path(category) %></td>
       <td><%= link_to 'Delete', category_path(category), method: :delete, data: { confirm: "Are you sure?"} %></td>
+      <td><div> by <%= category.user.username %> </div> </td>
     </tr>
     <% end %>
   </tbody>
