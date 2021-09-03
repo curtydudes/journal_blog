@@ -11,3 +11,11 @@
 
 <%= link_to 'Make New Task', new_category_agenda_path(@category) %> |
 <%= link_to 'Show Task', category_agendas_path(@category) %>
+
+<h1>Your Tasks today:</h1>
+      <% @agendas.each do |agenda| %>
+        <% if agenda.deadline == Date.today %>
+            <p>Task Name: <%= agenda.task_name %> </p>
+            <p>Task Description: <%= agenda.task_description %> </p>
+        <% end %>
+      <% end %>

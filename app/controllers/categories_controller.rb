@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @agendas = Agenda.all
   end
 
   def create
