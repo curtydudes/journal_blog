@@ -33,7 +33,7 @@ class AgendasController < ApplicationController
   def update
     @agenda = Agenda.find(params[:id])
     if @agenda.update(agenda_params)
-      flash[:notice] = "Category was updated successfully"
+      flash[:notice] = "Task was updated successfully"
       redirect_to category_agendas_path(@agenda.category_id)
     else
       render 'edit'

@@ -14,10 +14,10 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    @category.user = User.first
+    @category.user = current_user
     if @category.save 
       flash[:notice] = "Category was successfuly created"
-      redirect_to @category
+      redirect_to categories_path
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class CategoriesController < ApplicationController
   def update
     if @category.update(category_params)
       flash[:notice] = "Category was updated successfully"
-      redirect_to @category
+      redirect_to category_path
     else
       render 'edit'
     end
@@ -37,7 +37,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category.destroy
-    redirect_to @category
+    redirect_to category_path
   end
 
 

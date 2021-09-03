@@ -1,0 +1,24 @@
+<h1>Login Page</h1>
+
+<%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+ 
+  <p>
+    <%= f.label :email %> <br>
+    <%= f.email_field :email, placeholde: "Enter your email" %>
+  </p>  
+
+  <p>
+    <%= f.label :password %> <br> <%# even though the col name is password digest the virtual attribute will run as password%>
+    <%= f.password_field :password, placeholder: "Enter your password" %>
+  </p>  
+
+  <p>
+    <%= f.submit "Login", class: "loginButton"%>
+  </p>
+    <div>
+      <%= link_to 'Return to Main Page', root_path %>
+    </div>
+ 
+   
+   <% end %>
+  
