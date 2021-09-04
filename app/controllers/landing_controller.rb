@@ -6,5 +6,10 @@ class LandingController < ApplicationController
 
   def about
   end
+
+  def index
+    @categories = Category.all
+  end
+
   
 end
