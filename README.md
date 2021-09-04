@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my task journal. You can access it by going to my heroku url: https://journal-steven.herokuapp.com
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It's a simple rails project. It's designed to create categories of your task and to remind you of your daily deadlines. The UI is helped by bootstrap and the login and signup page was made using BCrypt. 
